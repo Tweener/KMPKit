@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.0] - December 17, 2024
+## [0.1.0] - December 17, 2024
 
 ### 🚀 Initial Release
 
