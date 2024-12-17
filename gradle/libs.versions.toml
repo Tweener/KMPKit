@@ -6,23 +6,16 @@ nexusSonatype = "2.0.0"
 dokka = "1.9.20"
 androidAnnotations = "1.9.1"
 coroutines = "1.9.0"
-napier = "2.7.1"
 composeMultiplatform = "1.7.1"
-
-# Tweener
-tweenerBom = "2.2.1"
+kotlinxDatetime = "0.6.1"
 
 # Android
 androidCore = "1.15.0"
 androidActivity = "1.9.3"
 
 [libraries]
-napier = { group = "io.github.aakira", name = "napier", version.ref = "napier" }
 compose-multiplatform-material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "composeMultiplatform" }
-
-# Tweener
-tweener-bom = { group = "io.github.tweener", name = "kmp-bom", version.ref = "tweenerBom" }
-tweener-common = { group = "io.github.tweener", name = "kmp-common" }
+kotlin-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
 
 # Coroutines
 kotlin-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }

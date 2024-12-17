@@ -84,15 +84,11 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
-            implementation(libs.napier)
-            implementation(libs.android.annotations)
-
-            // Tweener
-            implementation(project.dependencies.platform(libs.tweener.bom))
-            implementation(libs.tweener.common)
-
             // Coroutines
             implementation(libs.kotlin.coroutines.core)
+
+            // Datetime
+            api(libs.kotlin.datetime)
         }
 
         androidMain.dependencies {
@@ -100,7 +96,7 @@ kotlin {
             implementation(libs.kotlin.coroutines.android)
 
             // Android
-            implementation(libs.android.core)
+            api(libs.android.core)
         }
 
         iosMain.dependencies {
