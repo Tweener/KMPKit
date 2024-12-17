@@ -7,8 +7,8 @@ import org.gradle.api.JavaVersion
 
 object ProjectConfiguration {
 
-    object MyProject {
-        const val packageName = "com.tweener.changehere"
+    object KMPKit {
+        const val packageName = "com.tweener.kmpkit"
         const val versionName = "1.0.0"
         const val namespace = "$packageName.android"
         const val compileSDK = 35
@@ -16,11 +16,11 @@ object ProjectConfiguration {
 
         // TODO Change all the values in this block to your needs
         object Maven {
-            const val name = "MyKMPLibrary"
-            const val description = "All Tweener commons stuff for Kotlin Multiplatform"
+            const val name = "KMPKit"
+            const val description = "A Kotlin Multiplatform utility library offering extensions, validators, providers, coroutine tools, and more to enhance KMP development."
             const val group = "io.github.tweener"
-            const val packageUrl = "https://github.com/Tweener/kmp-common"
-            const val gitUrl = "github.com:Tweener/kmp-common.git"
+            const val packageUrl = "https://github.com/Tweener/KMPKit"
+            const val gitUrl = "github.com:Tweener/KMPKit.git"
 
             object Developer {
                 const val id = "Tweener"

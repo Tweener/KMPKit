@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Kmplate_Library"
-include(":changehere")
+rootProject.name = "KMPKit"
+include(":kmpkit")
 include(":sample:composeApp")
