@@ -1,7 +1,8 @@
 package com.tweener.kmpkit
 
-class AndroidPlatform : Platform {
-    override val name: String = "Android ${android.os.Build.VERSION.SDK_INT}"
-}
+/**
+ * @author Vivien Mahe
+ * @since 24/07/2024
+ */
 
-actual fun getPlatform(): Platform = AndroidPlatform()
+actual val currentPlatform = Platform.ANDROID

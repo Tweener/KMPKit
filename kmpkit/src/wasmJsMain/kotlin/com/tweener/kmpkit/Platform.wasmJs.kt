@@ -1,7 +1,8 @@
 package com.tweener.kmpkit
 
-class WasmJsPlatform : Platform {
-    override val name: String = "WasmJS"
-}
+/**
+ * @author Vivien Mahe
+ * @since 24/07/2024
+ */
 
-actual fun getPlatform(): Platform = WasmJsPlatform()
+actual val currentPlatform = Platform.WASM_JS

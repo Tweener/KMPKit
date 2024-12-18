@@ -1,7 +1,8 @@
 package com.tweener.kmpkit
 
-class JsPlatform : Platform {
-    override val name: String = "Js"
-}
+/**
+ * @author Vivien Mahe
+ * @since 24/07/2024
+ */
 
-actual fun getPlatform(): Platform = JsPlatform()
+actual val currentPlatform = Platform.JS

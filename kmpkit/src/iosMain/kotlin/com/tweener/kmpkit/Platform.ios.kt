@@ -1,9 +1,8 @@
 package com.tweener.kmpkit
 
-import platform.UIKit.UIDevice
+/**
+ * @author Vivien Mahe
+ * @since 24/07/2024
+ */
 
-class IOSPlatform: Platform {
-    override val name: String = UIDevice.currentDevice.systemName() + " " + UIDevice.currentDevice.systemVersion
-}
-
-actual fun getPlatform(): Platform = IOSPlatform()
+actual val currentPlatform = Platform.IOS
