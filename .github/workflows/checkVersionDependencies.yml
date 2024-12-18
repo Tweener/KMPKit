@@ -17,7 +17,7 @@ jobs:
       - name: Set up Java JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '${{ vars.JAVA_JDK_VERSION }}'
+          java-version: "${{ vars.JAVA_JDK_VERSION }}"
           distribution: 'zulu'
           cache: gradle
 
