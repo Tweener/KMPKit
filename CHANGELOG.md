@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.1.1] - November 13, 2024
+- Retrieve the [Platform](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/Platform.kt) type for the current target.
+- Add [Safelet](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/Safelet.kt) helper functions to safely combine multiple .let{} operations.
+
 ## [0.1.0] - December 17, 2024
 
 ### 🚀 Initial Release
