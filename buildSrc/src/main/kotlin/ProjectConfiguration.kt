@@ -14,7 +14,6 @@ object ProjectConfiguration {
         const val compileSDK = 35
         const val minSDK = 24
 
-        // TODO Change all the values in this block to your needs
         object Maven {
             const val name = "KMPKit"
             const val description = "A Kotlin Multiplatform utility library offering extensions, validators, providers, coroutine tools, and more to enhance KMP development."
