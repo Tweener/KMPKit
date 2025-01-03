@@ -141,3 +141,29 @@ fun LocalDateTime.plus(value: Int, unit: DateTimeUnit, timeZone: TimeZone = Time
  */
 fun LocalDateTime.plus(duration: Duration, timeZone: TimeZone = TimeZone.currentSystemDefault()): LocalDateTime =
     toInstant(timeZone = timeZone).plus(duration = duration).toLocalDateTime(timeZone = timeZone)
+
+/**
+ * Returns a new instance of [LocalDateTime] with the nanoseconds set to zero.
+ *
+ * This method effectively clears the fractional part of a second, including milliseconds and smaller units.
+ * It is useful when you want to normalize a [LocalDateTime] to ignore any precision below the second.
+ *
+ * Example:
+ * ```
+ * val dateTime = LocalDateTime(2025, 1, 3, 15, 45, 23, 456_789_000)
+ * val normalized = dateTime.ignoreNanoSeconds()
+ * println(normalized) // Output: 2025-01-03T15:45:23
+ * ```
+ *
+ * @return A new [LocalDateTime] instance with nanoseconds set to zero.
+ */
+fun LocalDateTime.ignoreNanoSeconds(): LocalDateTime =
+    LocalDateTime(
+        year = this.year,
+        month = this.month,
+        dayOfMonth = this.dayOfMonth,
+        hour = this.hour,
+        minute = this.minute,
+        second = this.second,
+        nanosecond = 0 // Clears milliseconds and smaller units
+    )
