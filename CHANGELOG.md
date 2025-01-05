@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.1.2] - January 4, 2025
+## [1.0.1] - January 5, 2025
 - Add a LocalDateTime extension function to [ignore nano seconds](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/DateTimeExtensions.kt#L160).
 
 ## [0.1.1] - December 18, 2024
