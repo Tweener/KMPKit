@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.2] - January 30, 2025
+- Add [`currentPlatformVersion`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/Platform.kt#L36) value to retrieve the current platform version on which the code is running.
+- 🤖 On Android, add [`Context.getRawUri()`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/androidMain/kotlin/com/tweener/kmpkit/kotlinextensions/ContextExtensions.kt#L34) extension function to get the URI of a raw resource file.
+
 ## [1.0.1] - January 5, 2025
 - Bump major version due to a versionning conflict (1.0.0 was previously released by mistake)
 - Add a LocalDateTime extension function to [ignore nano seconds](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/DateTimeExtensions.kt#L160).
