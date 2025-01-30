@@ -6,3 +6,6 @@ package com.tweener.kmpkit
  */
 
 actual val currentPlatform = Platform.JVM
+
+actual val currentPlatformVersion: String
+    get() = "JVM ${System.getProperty("java.version")}"

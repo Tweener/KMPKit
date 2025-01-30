@@ -6,3 +6,6 @@ package com.tweener.kmpkit
  */
 
 actual val currentPlatform = Platform.JS
+
+actual val currentPlatformVersion: String
+    get() = "JS (${js("navigator.userAgent") as? String ?: "Unknown"})"

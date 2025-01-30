@@ -6,3 +6,6 @@ package com.tweener.kmpkit
  */
 
 actual val currentPlatform = Platform.WASM_JS
+
+actual val currentPlatformVersion: String
+    get() = "Web with Kotlin/Wasm"
