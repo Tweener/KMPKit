@@ -10,4 +10,4 @@ import android.os.Build
 actual val currentPlatform = Platform.ANDROID
 
 actual val currentPlatformVersion: String
-    get() = "Android ${Build.VERSION.RELEASE} ${Build.VERSION.SDK_INT}"
+    get() = "Android ${Build.VERSION.RELEASE} (SDK ${Build.VERSION.SDK_INT})"
