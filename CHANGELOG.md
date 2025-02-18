@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.4] - February 18, 2025
+- Add [`Random.nextFloat()`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/RandomExtensions.kt#L13) extension function to return a random float in range.
+
 ## [1.0.3] - February 11, 2025
 - Add [`currentDeviceInfo`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/DeviceInfo.kt) value to retrieve the info of the device on which the code is running.
 
