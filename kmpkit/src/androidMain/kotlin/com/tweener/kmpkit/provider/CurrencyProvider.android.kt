@@ -13,7 +13,12 @@ class AndroidCurrencyProvider(
 ) : CurrencyProvider {
     override fun getCurrencyCode(): String? {
         val locale = Locale(localeProvider.getLanguage(), localeProvider.getCountry())
-        return Currency.getInstance(locale).currencyCode
+
+        return try {
+            Currency.getInstance(locale).currencyCode
+        } catch (throwable: Throwable) {
+            null
+        }
     }
 }
 
