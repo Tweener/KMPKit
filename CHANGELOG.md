@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.5] - February 24, 2025
+- Fixes `Currency.getInstance(locale).currencyCode` returning `null` on some Android devives.
+
 ## [1.0.4] - February 18, 2025
 - Add [`Random.nextFloat()`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/RandomExtensions.kt#L13) extension function to return a random float in range.
 
