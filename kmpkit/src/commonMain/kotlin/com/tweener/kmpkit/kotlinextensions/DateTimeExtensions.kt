@@ -167,3 +167,9 @@ fun LocalDateTime.ignoreNanoSeconds(): LocalDateTime =
         second = this.second,
         nanosecond = 0 // Clears milliseconds and smaller units
     )
+
+/**
+ * Returns the number of months between this LocalDateTime and the [other] LocalDateTime.
+ */
+fun LocalDateTime.monthsSince(other: LocalDateTime): Int =
+    (year - other.year) * 12 + (monthNumber - other.monthNumber)
