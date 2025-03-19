@@ -173,3 +173,24 @@ fun LocalDateTime.ignoreNanoSeconds(): LocalDateTime =
  */
 fun LocalDateTime.monthsSince(other: LocalDateTime): Int =
     (year - other.year) * 12 + (monthNumber - other.monthNumber)
+
+/**
+ * Returns a new [LocalDate] with the specified day of the month.
+ * If the provided day is less than 1, it defaults to 1.
+ * If the provided day exceeds the number of days in the month, it adjusts to the last valid day.
+ *
+ * @param day The desired day of the month.
+ * @return A [LocalDate] instance with the adjusted day of the month.
+ *
+ * **Examples:**
+ * ```
+ * LocalDate(2025, 2, 1).withDayOfMonth(31) // Returns February 28 (or 29 in leap years)
+ * LocalDate(2025, 4, 10).withDayOfMonth(31) // Returns April 30
+ * LocalDate(2025, 6, 1).withDayOfMonth(0)  // Returns June 1
+ * LocalDate(2025, 6, 1).withDayOfMonth(-5) // Returns June 1
+ * ```
+ */
+fun LocalDate.withDayOfMonth(day: Int): LocalDate {
+    val validDay = day.coerceIn(1, this.daysInMonth()) // Ensures day is between 1 and the month's last day
+    return LocalDate(year = this.year, month = this.month, dayOfMonth = validDay)
+}
