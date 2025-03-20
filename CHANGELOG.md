@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.6] - March 19, 2025
+- Add [`LocalDateTime.monthsSince`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/DateTimeExtensions.kt#L174) extension function to return the number of months between two LocalDateTime.
+- Add [`LocalDateTime.withDayOfMonth`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/DateTimeExtensions.kt#L193) extension function to return a new LocalDate with the specified day of the month.
+
 ## [1.0.5] - February 24, 2025
 - Fixes `Currency.getInstance(locale).currencyCode` returning `null` on some Android devives.
 
