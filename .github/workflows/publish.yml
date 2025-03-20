@@ -83,6 +83,8 @@ jobs:
             -PsonatypeUsername=${{ secrets.OSSRH_USERNAME }}
             -PsonatypePassword=${{ secrets.OSSRH_PASSWORD }}
             -PsonatypeStagingProfileId=${{ secrets.OSSRH_STAGING_PROFILE_ID }}
+          retry: 3 # Add retry logic
+          timeout: 30m # Increase the timeout
 
   notify:
     name: Send Slack notification
