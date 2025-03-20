@@ -32,7 +32,7 @@ Then add KMPKit dependency to your module:
 - With version catalog, open `libs.versions.toml`:
 ```Groovy
 [versions]
-kmpkit = "0.1.2" // Check latest version
+kmpkit = "1.*.*" // Check latest version
 
 [libraries]
 kmpkit = { group = "io.github.tweener", name = "kmpkit", version.ref = "kmpkit" }
@@ -48,7 +48,7 @@ dependencies {
 - Without version catalog, in your module `build.gradle.kts` add:
 ```Groovy
 dependencies {
-    val kmpkit_version = "0.1.2" // Check latest version
+    val kmpkit_version = "1.*.*" // Check latest version
 
     implementation("io.github.tweener:kmpkit:$kmpkit_version")
 }
