@@ -54,6 +54,6 @@ dependencies {
 }
 ```
 
-The latest version is: [![Maven Central Version](https://img.shields.io/maven-central/v/io.github.tweener/KMPKit?color=orange)](https://central.sonatype.com/artifact/io.github.tweener/KMPKit)
+The latest version is: [![Maven Central Version](https://img.shields.io/maven-central/v/io.github.tweener/kmpkit?color=orange)](https://central.sonatype.com/artifact/io.github.tweener/kmpkit)
 
 ---
