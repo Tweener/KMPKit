@@ -8,6 +8,7 @@ androidAnnotations = "1.9.1"
 coroutines = "1.10.1"
 composeMultiplatform = "1.7.3"
 kotlinxDatetime = "0.6.1"
+kotlinxBrowser = "0.3"
 
 # Android
 androidCore = "1.16.0"
@@ -16,6 +17,7 @@ androidActivity = "1.10.1"
 [libraries]
 compose-multiplatform-material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "composeMultiplatform" }
 kotlin-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
+kotlin-browser = { group = "org.jetbrains.kotlinx", name = "kotlinx-browser", version.ref = "kotlinxBrowser" }
 
 # Coroutines
 kotlin-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
