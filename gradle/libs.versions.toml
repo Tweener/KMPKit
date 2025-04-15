@@ -1,17 +1,17 @@
 [versions]
-kotlin = "2.0.21"
-gradle = "8.5.2"
+kotlin = "2.1.20"
+gradle = "8.8.2"
 dependencyVersionsPlugin = "0.51.0"
 nexusSonatype = "2.0.0"
 dokka = "1.9.20"
 androidAnnotations = "1.9.1"
-coroutines = "1.9.0"
-composeMultiplatform = "1.7.1"
+coroutines = "1.10.1"
+composeMultiplatform = "1.7.3"
 kotlinxDatetime = "0.6.1"
 
 # Android
-androidCore = "1.15.0"
-androidActivity = "1.9.3"
+androidCore = "1.16.0"
+androidActivity = "1.10.1"
 
 [libraries]
 compose-multiplatform-material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "composeMultiplatform" }
