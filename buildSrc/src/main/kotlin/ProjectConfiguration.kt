@@ -9,7 +9,7 @@ object ProjectConfiguration {
 
     object KMPKit {
         const val packageName = "com.tweener.kmpkit"
-        const val versionName = "1.0.6"
+        const val versionName = "1.0.7"
         const val namespace = "$packageName.android"
         const val compileSDK = 35
         const val minSDK = 24
