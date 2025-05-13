@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.8] - May 13, 2025
+- Update Kotlin to 2.1.21.
+- Update Compose Multiplatform to 1.8.0.
+- Migrate from Sonatype to Maven Central publishing.
+
 ## [1.0.7] - April 15, 2025
 - Update Kotlin to 2.1.20.
 - Update Gradle to 8.11.1.
