@@ -15,7 +15,7 @@ jobs:
     uses: ./.github/workflows/buildRelease.yml
 
   publish:
-    name: Build library and publish to Maven Central
+    name: Publish library
     needs: build-release
 
     strategy:
@@ -58,6 +58,12 @@ jobs:
           path: |
             ~/.konan
           key: ${{ runner.os }}-${{ hashFiles('**/.lock') }}
+
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
+          passphrase: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
 
       - name: Publish to Maven Central
         uses: gradle/gradle-build-action@ce999babab2de1c4b649dc15f0ee67e6246c994f
