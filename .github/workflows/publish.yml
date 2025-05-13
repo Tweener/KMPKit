@@ -60,17 +60,15 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/.lock') }}
 
       - name: Publish to Maven Central
-        run: ./gradlew releaseRepository
+        run: ./gradlew ${{ matrix.target }} releaseRepository
         env:
           ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.OSSRH_USERNAME }}
           ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.OSSRH_PASSWORD }}
           ORG_GRADLE_PROJECT_signingInMemoryKeyId: ${{ secrets.OSSRH_GPG_SECRET_KEY_ID }}
           ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.OSSRH_GPG_SECRET_KEY_PASSWORD }}
           ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.OSSRH_GPG_SECRET_KEY }}
-        with:
-          arguments: ${{ matrix.target }}
-          retry: 3 # Add retry logic
-          timeout: 30m # Increase the timeout
+        timeout-minutes: 30 # Set timeout for the step
+  #          retry: 3 # Add retry logic
 
   notify:
     name: Send Slack notification
