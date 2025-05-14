@@ -1,5 +1,8 @@
 # Changelog
 
+## [1.0.9] - May 14, 2025
+- [BREAKING] Move SafeLet from package `com.tweener.kmpkit` to `com.tweener.kmpkit.utils`.
+
 ## [1.0.8] - May 13, 2025
 - Update Kotlin to 2.1.21.
 - Update Compose Multiplatform to 1.8.0.
