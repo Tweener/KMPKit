@@ -28,14 +28,15 @@ jobs:
           java-version: '${{ vars.JAVA_JDK_VERSION }}'
           distribution: "zulu"
 
-      - name: Setup Gradle cache
+      - name: Caching Kotlin/Native tooling
         uses: actions/cache@v3
         with:
           path: |
             ~/.konan
           key: ${{ runner.os }}-${{ hashFiles('**/.lock') }}
 
-      - name: Build with Gradle
-        uses: gradle/actions/setup-gradle@v3
-        with:
-          arguments: ${{ matrix.target }}
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Build library
+        run: ./gradlew ${{ matrix.target }}
