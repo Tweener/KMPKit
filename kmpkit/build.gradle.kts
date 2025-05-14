@@ -137,6 +137,8 @@ mavenPublishing {
 
     signAllPublications()
 
+    coordinates(group.toString(), "fibonacci", version.toString())
+
     artifacts {
         this.archives(tasks["dokkaJavadocJar"])
     }
