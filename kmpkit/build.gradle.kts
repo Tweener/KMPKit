@@ -133,11 +133,9 @@ tasks.withType<DokkaTask>().configureEach {
 }
 
 mavenPublishing {
-    publishToMavenCentral(SonatypeHost.CENTRAL_PORTAL)
-
+    publishToMavenCentral(host = SonatypeHost.CENTRAL_PORTAL, automaticRelease = true)
     signAllPublications()
-
-    coordinates(group.toString(), ProjectConfiguration.KMPKit.Maven.name.lowercase(), version.toString())
+    coordinates(groupId = group.toString(), artifactId = ProjectConfiguration.KMPKit.Maven.name.lowercase(), version = version.toString())
 
     artifacts {
         this.archives(tasks["dokkaJavadocJar"])
