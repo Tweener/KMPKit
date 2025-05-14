@@ -22,7 +22,7 @@ jobs:
       - name: Validate Gradle Wrapper
         uses: gradle/actions/wrapper-validation@v3
 
-      - name: Set up Java JDK ${{ vars.JAVA_JDK_VERSION }}"
+      - name: Set up Java JDK ${{ vars.JAVA_JDK_VERSION }}
         uses: actions/setup-java@v4
         with:
           java-version: '${{ vars.JAVA_JDK_VERSION }}'
