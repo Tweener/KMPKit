@@ -1,4 +1,4 @@
-package com.tweener.kmpkit
+package com.tweener.kmpkit.utils
 
 /**
  * Helper functions to safely combine multiple .let{} operations.
