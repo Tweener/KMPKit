@@ -1,13 +1,13 @@
 # Changelog
 
-## [1.0.9] - May 14, 2025
+## [1.0.10] - May 14, 2025
 - Update Kotlin to 2.2.0.
 - Update Gradle to 8.11.1.
 - Update Compose Multiplatform to 1.8.2.
 - Update Coroutines to 1.10.2.
 - Kotlin Datetime: 0.7.1
 
-## [1.0.10] - July 15, 2025
+## [1.0.0] - July 15, 2025
 - [BREAKING] Move SafeLet from package `com.tweener.kmpkit` to `com.tweener.kmpkit.utils`.
 
 ## [1.0.8] - May 13, 2025
