@@ -1,18 +1,22 @@
+@file:OptIn(ExperimentalTime::class)
+
 package com.tweener.kmpkit.kotlinextensions
 
-import kotlinx.datetime.Clock
 import kotlinx.datetime.DateTimeUnit
-import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.LocalTime
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.atTime
+import kotlinx.datetime.number
 import kotlinx.datetime.plus
 import kotlinx.datetime.toInstant
 import kotlinx.datetime.toLocalDateTime
 import kotlinx.datetime.until
+import kotlin.time.Clock
 import kotlin.time.Duration
+import kotlin.time.ExperimentalTime
+import kotlin.time.Instant
 
 /**
  * @author Vivien Mahe
@@ -111,7 +115,7 @@ fun Long.fromEpochMilliseconds(timeZone: TimeZone = TimeZone.currentSystemDefaul
  */
 fun LocalDateTime.daysInMonth(): Int = date.daysInMonth()
 
-/**🎉
+/**
  * Returns the number of days in the current month for this LocalDate.
  *
  * @return The number of days in the month.
@@ -119,7 +123,7 @@ fun LocalDateTime.daysInMonth(): Int = date.daysInMonth()
 fun LocalDate.daysInMonth(): Int {
     val start = LocalDate(year, month, 1)
     val end = start.plus(1, DateTimeUnit.MONTH)
-    return start.until(end, DateTimeUnit.DAY)
+    return start.until(end, DateTimeUnit.DAY).toInt()
 }
 
 /**
@@ -161,7 +165,7 @@ fun LocalDateTime.ignoreNanoSeconds(): LocalDateTime =
     LocalDateTime(
         year = this.year,
         month = this.month,
-        dayOfMonth = this.dayOfMonth,
+        day = this.day,
         hour = this.hour,
         minute = this.minute,
         second = this.second,
@@ -172,7 +176,7 @@ fun LocalDateTime.ignoreNanoSeconds(): LocalDateTime =
  * Returns the number of months between this LocalDateTime and the [other] LocalDateTime.
  */
 fun LocalDateTime.monthsSince(other: LocalDateTime): Int =
-    (year - other.year) * 12 + (monthNumber - other.monthNumber)
+    (year - other.year) * 12 + (month.number - other.month.number)
 
 /**
  * Returns a new [LocalDate] with the specified day of the month.
@@ -192,5 +196,5 @@ fun LocalDateTime.monthsSince(other: LocalDateTime): Int =
  */
 fun LocalDate.withDayOfMonth(day: Int): LocalDate {
     val validDay = day.coerceIn(1, this.daysInMonth()) // Ensures day is between 1 and the month's last day
-    return LocalDate(year = this.year, month = this.month, dayOfMonth = validDay)
+    return LocalDate(year = this.year, month = this.month, day = validDay)
 }
