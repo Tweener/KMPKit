@@ -113,8 +113,14 @@ group = ProjectConfiguration.KMPKit.Maven.group
 version = ProjectConfiguration.KMPKit.versionName
 
 mavenPublishing {
-    publishToMavenCentral(host = SonatypeHost.CENTRAL_PORTAL, automaticRelease = true)
-    signAllPublications()
+    publishToMavenCentral(automaticRelease = true)
+
+    // Only disable signing if the flag is explicitly set to false
+    val signAllPublicationsProperty = findProperty("mavenPublishing.signAllPublications")
+    if (signAllPublicationsProperty == null || signAllPublicationsProperty.toString().toBoolean()) {
+        signAllPublications()
+    }
+
     coordinates(groupId = group.toString(), artifactId = ProjectConfiguration.KMPKit.Maven.name.lowercase(), version = version.toString())
     configure(
         platform = KotlinMultiplatform(
