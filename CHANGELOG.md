@@ -7,7 +7,7 @@
 - Update Coroutines to 1.10.2.
 - Kotlin Datetime: 0.7.1
 
-## [1.0.0] - July 15, 2025
+## [1.0.9] - July 15, 2025
 - [BREAKING] Move SafeLet from package `com.tweener.kmpkit` to `com.tweener.kmpkit.utils`.
 
 ## [1.0.8] - May 13, 2025
