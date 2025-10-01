@@ -127,6 +127,18 @@ fun LocalDate.daysInMonth(): Int {
 }
 
 /**
+ * Returns the number of days in the current year for this LocalDate.
+ *
+ * @return The number of days in the year (365 or 366 for leap years).
+ */
+fun LocalDate.getDaysInYear(): Int = if (isLeapYear()) 366 else 365
+
+/**
+ * Determines if the year of this LocalDate is a leap year.
+ */
+fun LocalDate.isLeapYear(): Boolean = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
+
+/**
  * Returns a LocalDateTime that results from adding the value number of the specified unit to this date and time.
  */
 fun LocalDateTime.plus(value: Int, unit: DateTimeUnit, timeZone: TimeZone = TimeZone.currentSystemDefault()): LocalDateTime =
