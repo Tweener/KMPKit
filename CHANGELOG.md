@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.11] - October 1, 2025
+- Update Kotlin to 2.2.20.
+- Update Gradle to 8.13.0.
+- Update Compose Multiplatform to 1.9.0.
+- Update Material3 to 1.9.0-beta06.
+- Update Maven Publish plugin to 0.34.0.
+- Update Dependency Versions plugin to 0.53.0.
+- Update kotlinx-browser to 0.5.0.
+- Update Android core to 1.17.0.
+- Update Android activity to 1.11.0.
+- Add [`LocalDate.getDaysInYear()`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/DateTimeExtensions.kt) extension function to get the number of days in the year.
+- Add [`LocalDate.isLeapYear()`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/DateTimeExtensions.kt) extension function to check if the year is a leap year.
+
 ## [1.0.10] - July 15, 2025
 - Update Kotlin to 2.2.0.
 - Update Gradle to 8.11.1.
