@@ -80,6 +80,14 @@ fun LocalDate.isBefore(other: LocalDate) = this < other
 fun LocalDate.isSameDate(other: LocalDate) = this == other
 
 /**
+ * Checks if this LocalDate is today in the specified time zone.
+ *
+ * @param timeZone The time zone to use. Defaults to the system's current time zone.
+ * @return True if this LocalDate is today, false otherwise.
+ */
+fun LocalDate.isToday(timeZone: TimeZone = TimeZone.currentSystemDefault()) = this.isSameDate(LocalDate.now(timeZone = timeZone))
+
+/**
  * Converts this LocalDate to the number of milliseconds since the epoch at the current time in the specified time zone.
  *
  * @param timeZone The time zone to use. Defaults to the system's current time zone.
