@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.13] - October 27, 2025
+- Update Kotlin to 2.2.20.
+- Update Gradle to 8.13.0.
+- Update Compose Multiplatform to 1.9.1.
+- Update Material3 to 1.9.0.
+- Update Dokka to 2.1.0.
+- Update Android compile SDK to 36.
+
 ## [1.0.12] - October 27, 2025
 - Add [`LocalDate.isToday()`](https://github.com/Tweener/KMPKit/blob/main/kmpkit/src/commonMain/kotlin/com/tweener/kmpkit/kotlinextensions/DateTimeExtensions.kt) extension function to check if a date is today in a specified time zone.
 - Remove iosX64 target from build and publish configs.
