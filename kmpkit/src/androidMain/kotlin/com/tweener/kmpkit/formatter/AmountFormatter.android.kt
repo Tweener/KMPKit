@@ -10,7 +10,7 @@ import java.util.Locale
  */
 
 internal actual fun getFormattedAmount(value: Double, currency: String, localeLanguage: String, showDecimals: Boolean): String {
-    val numberFormat = NumberFormat.getCurrencyInstance(Locale(localeLanguage)).apply {
+    val numberFormat = NumberFormat.getCurrencyInstance(Locale.forLanguageTag(localeLanguage)).apply {
         this.currency = Currency.getInstance(currency)
         if (showDecimals.not()) maximumFractionDigits = 0
         if (showDecimals.not()) minimumFractionDigits = 0
