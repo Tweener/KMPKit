@@ -1,6 +1,8 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.kmp.library)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.jetbrains.compose.compiler)
 }
@@ -8,7 +10,15 @@ plugins {
 kotlin {
     applyDefaultHierarchyTemplate()
 
-    androidTarget()
+    android {
+        namespace = ProjectConfiguration.KMPKit.packageName + ".sample"
+        compileSdk = ProjectConfiguration.KMPKit.compileSDK
+        minSdk = ProjectConfiguration.KMPKit.minSDK
+
+        compilerOptions {
+            jvmTarget.set(JvmTarget.fromTarget(ProjectConfiguration.Compiler.jvmTarget))
+        }
+    }
 
     // region iOS configuration
 
@@ -38,39 +48,5 @@ kotlin {
             implementation(compose.ui)
             implementation(libs.compose.multiplatform.material3)
         }
-
-        androidMain.dependencies {
-            implementation(libs.android.activity)
-            implementation(libs.android.activity.compose)
-        }
-    }
-}
-
-android {
-    namespace = ProjectConfiguration.KMPKit.packageName + ".sample"
-    compileSdk = ProjectConfiguration.KMPKit.compileSDK
-
-    defaultConfig {
-        applicationId = ProjectConfiguration.KMPKit.packageName + ".sample"
-        minSdk = ProjectConfiguration.KMPKit.minSDK
-        targetSdk = ProjectConfiguration.KMPKit.compileSDK
-        versionCode = 1
-        versionName = "1.0"
-    }
-
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility = ProjectConfiguration.Compiler.javaCompatibility
-        targetCompatibility = ProjectConfiguration.Compiler.javaCompatibility
-    }
-
-    buildFeatures {
-        compose = true
     }
 }

@@ -19,3 +19,4 @@ dependencyResolutionManagement {
 rootProject.name = "KMPKit"
 include(":kmpkit")
 include(":sample:composeApp")
+include(":sample:androidApp")

@@ -5,42 +5,18 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
-    alias(libs.plugins.android.library)
+    alias(libs.plugins.android.kmp.library)
     alias(libs.plugins.dokka)
     alias(libs.plugins.maven.publish)
-}
-
-android {
-    namespace = ProjectConfiguration.KMPKit.namespace
-    compileSdk = ProjectConfiguration.KMPKit.compileSDK
-
-    defaultConfig {
-        minSdk = ProjectConfiguration.KMPKit.minSDK
-
-        consumerProguardFiles("consumer-rules.pro")
-    }
-
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-        }
-
-        getByName("debug") {
-        }
-    }
-
-    compileOptions {
-        sourceCompatibility = ProjectConfiguration.Compiler.javaCompatibility
-        targetCompatibility = ProjectConfiguration.Compiler.javaCompatibility
-    }
 }
 
 kotlin {
     applyDefaultHierarchyTemplate()
 
-    androidTarget {
-        publishLibraryVariants("release")
+    android {
+        namespace = ProjectConfiguration.KMPKit.namespace
+        compileSdk = ProjectConfiguration.KMPKit.compileSDK
+        minSdk = ProjectConfiguration.KMPKit.minSDK
 
         compilerOptions {
             jvmTarget.set(JvmTarget.fromTarget(ProjectConfiguration.Compiler.jvmTarget))
