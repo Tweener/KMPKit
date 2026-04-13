@@ -9,6 +9,9 @@
 - Update Android core to 1.18.0.
 - Update Android activity to 1.13.0.
 - Fix deprecated `Locale` constructor usage in `AmountFormatter`.
+- Migrate to AGP 9.0 KMP-compatible project structure: replace `com.android.library` with `com.android.kotlin.multiplatform.library` in `kmpkit` and `sample:composeApp`.
+- Split `sample:composeApp` into a KMP shared library and a new `sample:androidApp` module (pure `com.android.application`) to comply with AGP 9.0 restrictions.
+- Remove deprecated `org.jetbrains.kotlin.android` plugin by enabling AGP 9.0 built-in Kotlin support.
 
 ## [1.0.13] - October 27, 2025
 - Update Kotlin to 2.2.20.
