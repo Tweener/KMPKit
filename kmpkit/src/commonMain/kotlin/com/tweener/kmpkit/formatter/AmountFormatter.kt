@@ -19,6 +19,15 @@ fun formatAmount(value: Double, currency: String, localeLanguage: String, showDe
     return insertAbbreviationInFormattedCurrency(formattedValue, suffix)
 }
 
+/**
+ * Platform-specific implementation that formats [value] as a currency string.
+ *
+ * @param value The numeric amount to format.
+ * @param currency The ISO 4217 currency code (e.g., "USD", "EUR").
+ * @param localeLanguage The BCP 47 language tag used to determine locale-specific formatting (e.g., "en-US", "fr-FR").
+ * @param showDecimals Whether to include decimal digits in the formatted output. Defaults to `true`.
+ * @return A locale- and currency-aware formatted string (e.g., "$1,234.56" or "1 234,56 €").
+ */
 internal expect fun getFormattedAmount(value: Double, currency: String, localeLanguage: String, showDecimals: Boolean = true): String
 
 /**
