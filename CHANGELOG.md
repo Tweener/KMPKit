@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.14] - April 13, 2026
+- Update Kotlin to 2.3.20.
+- Update Gradle to 9.1.0.
+- Update Compose Multiplatform to 1.10.3.
+- Update Dokka to 2.2.0.
+- Update Maven Publish plugin to 0.36.0.
+- Update Android core to 1.18.0.
+- Update Android activity to 1.13.0.
+- Fix deprecated `Locale` constructor usage in `AmountFormatter`.
+
 ## [1.0.13] - October 27, 2025
 - Update Kotlin to 2.2.20.
 - Update Gradle to 8.13.0.
