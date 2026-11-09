@@ -1,7 +1,7 @@
 [![Maven Central Version](https://img.shields.io/maven-central/v/io.github.tweener/kmpkit?color=orange)](https://central.sonatype.com/artifact/io.github.tweener/kmpkit)
-[![Kotlin](https://img.shields.io/badge/kotlin-2.3.20-blue.svg?logo=kotlin)](http://kotlinlang.org)
-[![Compose](https://img.shields.io/badge/compose-1.10.3-blue.svg?logo=jetpackcompose)](https://www.jetbrains.com/lp/compose-multiplatform)
-![gradle-version](https://img.shields.io/badge/gradle-9.3.1-blue?logo=gradle)
+[![Kotlin](https://img.shields.io/badge/kotlin-2.4.21-blue.svg?logo=kotlin)](http://kotlinlang.org)
+[![Compose](https://img.shields.io/badge/compose-1.12.2-blue.svg?logo=jetpackcompose)](https://www.jetbrains.com/lp/compose-multiplatform)
+![gradle-version](https://img.shields.io/badge/gradle-9.5.1-blue?logo=gradle)
 [![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
 
 [![Website](https://img.shields.io/badge/Author-vivienmahe.com-purple)](https://vivienmahe.com/)
