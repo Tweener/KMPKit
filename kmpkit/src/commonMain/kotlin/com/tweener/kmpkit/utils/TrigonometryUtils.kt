@@ -70,25 +70,25 @@ value class Radians(val value: Double) : Comparable<Radians> {
 
     operator fun minus(other: Radians) = Radians(value = this.value - other.value)
 
-    operator fun minus(other: Int) = Radians(value = this.value + other)
+    operator fun minus(other: Int) = Radians(value = this.value - other)
 
-    operator fun minus(other: Float) = Radians(value = this.value + other)
+    operator fun minus(other: Float) = Radians(value = this.value - other)
 
-    operator fun minus(other: Double) = Radians(value = this.value + other)
+    operator fun minus(other: Double) = Radians(value = this.value - other)
 
     operator fun div(other: Radians): Radians = Radians(value = value / other.value)
 
-    operator fun div(other: Int) = Radians(value = this.value + other)
+    operator fun div(other: Int): Radians = Radians(value = value / other)
 
-    operator fun div(other: Float) = Radians(value = this.value + other)
+    operator fun div(other: Float): Radians = Radians(value = value / other)
 
     operator fun div(other: Double): Radians = Radians(value = value / other)
 
     operator fun times(other: Radians): Radians = Radians(value = value * other.value)
 
-    operator fun times(other: Int) = Radians(value = this.value + other)
+    operator fun times(other: Int): Radians = Radians(value = value * other)
 
-    operator fun times(other: Float) = Radians(value = this.value + other)
+    operator fun times(other: Float): Radians = Radians(value = value * other)
 
     operator fun times(other: Double): Radians = Radians(value = value * other)
 
