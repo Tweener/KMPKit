@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.15] - November 9, 2026
+- Fix `Radians` operators that added the value instead: `minus` with an `Int`, `Float` or `Double`, and `div` and `times` with an `Int` or `Float`.
+- Add the Apache 2.0 `LICENSE` file.
+
 ## [1.0.14] - April 13, 2026
 - Update Kotlin to 2.3.20.
 - Update Gradle to 9.1.0.
