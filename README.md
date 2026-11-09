@@ -1,8 +1,8 @@
 [![Maven Central Version](https://img.shields.io/maven-central/v/io.github.tweener/kmpkit?color=orange)](https://central.sonatype.com/artifact/io.github.tweener/kmpkit)
-[![Kotlin](https://img.shields.io/badge/kotlin-2.2.20-blue.svg?logo=kotlin)](http://kotlinlang.org)
-[![Compose](https://img.shields.io/badge/compose-1.9.1-blue.svg?logo=jetpackcompose)](https://www.jetbrains.com/lp/compose-multiplatform)
-![gradle-version](https://img.shields.io/badge/gradle-8.13.0-blue?logo=gradle)
-[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Kotlin](https://img.shields.io/badge/kotlin-2.3.20-blue.svg?logo=kotlin)](http://kotlinlang.org)
+[![Compose](https://img.shields.io/badge/compose-1.10.3-blue.svg?logo=jetpackcompose)](https://www.jetbrains.com/lp/compose-multiplatform)
+![gradle-version](https://img.shields.io/badge/gradle-9.3.1-blue?logo=gradle)
+[![License](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
 
 [![Website](https://img.shields.io/badge/Author-vivienmahe.com-purple)](https://vivienmahe.com/)
 [![X/Twitter](https://img.shields.io/twitter/follow/VivienMahe)](https://twitter.com/VivienMahe)
@@ -58,3 +58,7 @@ dependencies {
 The latest version is: [![Maven Central Version](https://img.shields.io/maven-central/v/io.github.tweener/kmpkit?color=orange)](https://central.sonatype.com/artifact/io.github.tweener/kmpkit)
 
 ---
+
+## 📜 Licence
+
+KMPKit is licensed under the [Apache-2.0](LICENSE).
