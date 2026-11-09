@@ -1,6 +1,17 @@
 # Changelog
 
 ## [1.0.15] - November 9, 2026
+- Update Kotlin to 2.4.21.
+- Update Gradle to 9.5.1.
+- Update Gradle wrapper to 9.9.0.
+- Update Compose Multiplatform to 1.12.2.
+- Update Dokka to 2.3.0.
+- Update Maven Publish plugin to 0.37.0.
+- Update Dependency Versions plugin to 0.67.0.
+- Update kotlinx-coroutines to 1.11.0.
+- Update kotlinx-datetime to 0.8.0.
+- Update Android core to 1.19.1.
+- Update Android compile SDK to 37: Android core 1.19.1 requires apps using KMPKit to compile against API 37 or later.
 - Fix `Radians` operators that added the value instead: `minus` with an `Int`, `Float` or `Double`, and `div` and `times` with an `Int` or `Float`.
 - Add the Apache 2.0 `LICENSE` file.
 
